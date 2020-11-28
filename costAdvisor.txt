@@ -1,0 +1,35 @@
+import com.lmig.intl.cloud.jenkins.constants.EnvConstants
+
+def call(Map config) {
+
+    def cfnStackName = ""
+
+    library 'gentium@feature/LIGEPCSA-6265'
+
+      if (cfnStackName != null){
+          println "STACKNAME: ${cfnStackName}"
+                try {
+                    def recommendations = gtmCostAdvisor.cfnRightSizingRecommendations(cfnStackName:'aws-apimgmt-hg-development')
+                    def display = getDisplay()
+                    //display.waitFor()
+                    //println display
+                } catch(Exception e){
+                    throw e
+                }
+    }
+}
+
+def getDisplay(){
+    /**
+    Generete a version number with the git hash(short version) and build number
+    version = git hash + build number
+    */
+
+    //version = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
+    //version = version  + '-' + env.BUILD_NUMBER
+    //echo "version number " + version
+    echo 's3 download files'
+    s3Download(file: "${pwd()}/test", bucket: "intl-prod-eu-west-1-compliance", path: "", force:true)
+    sh 'ls -l test'
+    sh 'python3 ./test/hello_world.py'
+}

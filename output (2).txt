@@ -1,0 +1,274 @@
+Started by user Traynor, Emmett
+Replayed #151
+Running in Durability level: MAX_SURVIVABILITY
+Loading library gentium@feature/LIGEPCSA-6265
+Attempting to resolve feature/LIGEPCSA-6265 from remote references...
+ > git --version # timeout=10
+ > git --version # 'git version 2.23.3'
+using GIT_ASKPASS to set credentials bitbucket-prod-cred (using with Bitbucket production servers)
+ > git ls-remote -h -- https://bitbucket-emea.aws.lmig.com/scm/pipint/gentium-shared-lib.git # timeout=10
+Found match: refs/heads/feature/LIGEPCSA-6265 revision d6f4b64bf46df8479adbbcf3c5f43aab9e78e244
+The recommended git tool is: NONE
+using credential bitbucket-prod-cred
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://bitbucket-emea.aws.lmig.com/scm/pipint/gentium-shared-lib.git # timeout=10
+Fetching without tags
+Fetching upstream changes from https://bitbucket-emea.aws.lmig.com/scm/pipint/gentium-shared-lib.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.23.3'
+using GIT_ASKPASS to set credentials bitbucket-prod-cred (using with Bitbucket production servers)
+ > git fetch --no-tags --force --progress -- https://bitbucket-emea.aws.lmig.com/scm/pipint/gentium-shared-lib.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision d6f4b64bf46df8479adbbcf3c5f43aab9e78e244 (feature/LIGEPCSA-6265)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d6f4b64bf46df8479adbbcf3c5f43aab9e78e244 # timeout=10
+Commit message: "no message"
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on default-5pns7 in /home/jenkins/workspace/Test_jobs/CostRecommendations
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (test)
+[Pipeline] withCredentials
+Masking supported pattern matches of $CLIENT_ID or $CLIENT_SECRET
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] echo
+  
+[Pipeline] echo
+id	
+[Pipeline] echo
+                   
+[Pipeline] echo
+recommendation_id	
+[Pipeline] echo
+     
+[Pipeline] echo
+recommendation_date	
+[Pipeline] echo
+        
+[Pipeline] echo
+resource_id	
+[Pipeline] echo
+cloudformation_resource_logical_id	
+[Pipeline] echo
+ 
+[Pipeline] echo
+cloudformation_stack_name	
+[Pipeline] echo
+                                                                                                 
+[Pipeline] echo
+cloudformation_stack_id	
+[Pipeline] echo
+                     
+[Pipeline] echo
+deployment_guid	
+[Pipeline] echo
+troux_uuid	
+[Pipeline] echo
+   
+[Pipeline] echo
+application	
+[Pipeline] echo
+environment	
+[Pipeline] echo
+sbu	
+[Pipeline] echo
+ 
+[Pipeline] echo
+aws_account	
+[Pipeline] echo
+    
+[Pipeline] echo
+aws_region	
+[Pipeline] echo
+       
+[Pipeline] echo
+aws_zone	
+[Pipeline] echo
+service_type	
+[Pipeline] echo
+current_node_type	
+[Pipeline] echo
+current_run_rate	
+[Pipeline] echo
+hours_running	
+[Pipeline] echo
+current_cost	
+[Pipeline] echo
+recommended_action	
+[Pipeline] echo
+recommended_node_type	
+[Pipeline] echo
+recommended_run_rate	
+[Pipeline] echo
+recommended_cost	
+[Pipeline] echo
+recommendation_risk_level	
+[Pipeline] echo
+savings	
+[Pipeline] echo
+savings_percent	
+[Pipeline] echo
+      
+[Pipeline] echo
+vendor	
+[Pipeline] echo
+               
+[Pipeline] echo
+last_seen	
+[Pipeline] echo
+executed	
+[Pipeline] echo
+executed_date	
+[Pipeline] echo
+status	
+[Pipeline] echo
+status_changed_date	
+[Pipeline] echo
+raw_current_cost	
+[Pipeline] echo
+raw_recommended_cost	
+[Pipeline] echo
+raw_savings	
+[Pipeline] echo
+raw_savings_percent	
+[Pipeline] echo
+raw_reporting_period	
+[Pipeline] echo
+
+
+[Pipeline] echo
+4121	
+[Pipeline] echo
+0d232f21-c526-443f-9df1-750cc24de884	
+[Pipeline] echo
+2020-11-05T11:35:10.000Z	
+[Pipeline] echo
+i-0e16223b79a81dd8d	
+[Pipeline] echo
+           
+[Pipeline] echo
+apigeeautoscalinggroup1	
+[Pipeline] echo
+aws-apimgmt-hg-development	
+[Pipeline] echo
+arn:aws:cloudformation:ap-southeast-1:191135509750:stack/aws-apimgmt-hg-development/0a4aba00-87c4-11e9-a95b-0a14ee878cf4	
+[Pipeline] echo
+72918be2-505f-4b0b-83e6-4cb3b8cc0bfb	
+[Pipeline] echo
+      
+[Pipeline] echo
+null	
+[Pipeline] echo
+aws-apimgmt-hg	
+[Pipeline] echo
+development	
+[Pipeline] echo
+ets	
+[Pipeline] echo
+191135509750	
+[Pipeline] echo
+ap-southeast-1	
+[Pipeline] echo
+ap-southeast-1a	
+[Pipeline] echo
+         
+[Pipeline] echo
+ec2	
+[Pipeline] echo
+         
+[Pipeline] echo
+c5.large	
+[Pipeline] echo
+            
+[Pipeline] echo
+0.07	
+[Pipeline] echo
+          
+[Pipeline] echo
+240	
+[Pipeline] echo
+       
+[Pipeline] echo
+1.776	
+[Pipeline] echo
+         
+[Pipeline] echo
+Rightsize	
+[Pipeline] echo
+            
+[Pipeline] echo
+t3a.small	
+[Pipeline] echo
+                
+[Pipeline] echo
+0.02	
+[Pipeline] echo
+            
+[Pipeline] echo
+0.48	
+[Pipeline] echo
+                        
+[Pipeline] echo
+0	
+[Pipeline] echo
+  
+[Pipeline] echo
+1.296	
+[Pipeline] echo
+72.972972972973	
+[Pipeline] echo
+cloudability	
+[Pipeline] echo
+2020-11-03T19:00:00.000Z	
+[Pipeline] echo
+   
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+hudson.remoting.ProxyException: groovy.lang.MissingMethodException: No signature of method: java.lang.Boolean.plus() is applicable for argument types: (java.lang.String) values: [	]
+Possible solutions: is(java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;), wait(), find(), grep()
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:58)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaClassSite.call(PojoMetaClassSite.java:49)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at com.cloudbees.groovy.cps.sandbox.DefaultInvoker.methodCall(DefaultInvoker.java:20)
+	at gtmCostAdvisor.cfnRightSizingRecommendations(gtmCostAdvisor.groovy:42)
+	at WorkflowScript.run(WorkflowScript:5)
+	at ___cps.transform___(Native Method)
+	at com.cloudbees.groovy.cps.impl.ContinuationGroup.methodCall(ContinuationGroup.java:86)
+	at com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.dispatchOrArg(FunctionCallBlock.java:113)
+	at com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.fixArg(FunctionCallBlock.java:83)
+	at sun.reflect.GeneratedMethodAccessor428.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)
+	at com.cloudbees.groovy.cps.impl.ConstantBlock.eval(ConstantBlock.java:21)
+	at com.cloudbees.groovy.cps.Next.step(Next.java:83)
+	at com.cloudbees.groovy.cps.Continuable$1.call(Continuable.java:174)
+	at com.cloudbees.groovy.cps.Continuable$1.call(Continuable.java:163)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:129)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:268)
+	at com.cloudbees.groovy.cps.Continuable.run0(Continuable.java:163)
+	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.access$001(SandboxContinuable.java:18)
+	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.run0(SandboxContinuable.java:51)
+	at org.jenkinsci.plugins.workflow.cps.CpsThread.runNextChunk(CpsThread.java:185)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:400)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.access$400(CpsThreadGroup.java:96)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:312)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:276)
+	at org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$2.call(CpsVmExecutorService.java:67)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:136)
+	at jenkins.util.ContextResettingExecutorService$1.run(ContextResettingExecutorService.java:28)
+	at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Finished: FAILURE
